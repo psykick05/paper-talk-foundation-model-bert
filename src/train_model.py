@@ -7,7 +7,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 model = ChatBERT(
     config_path="bert-base-cased",
-    tokenizer_path="aditeyabaral/paper-talk-tokenizer",  # Replace with your username and tokenizer if you update it
+    tokenizer_path="psykick05/paper-talk-tokenizer",  # Replace with your username and tokenizer if you update it
     context_selector_mode="keybert",
     device="cuda"
 ).to(device)
@@ -59,6 +59,6 @@ trainer.train(
     tensorboard_log_dir="./logs",
     hub_model_name="paper-talk-model",  # Replace this with any name you wish
     hub_organization="chatbert",
-    auth_token="<your auth token>", # Replace the token
+    auth_token="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", # Replace the token
     device="cuda",
 )
